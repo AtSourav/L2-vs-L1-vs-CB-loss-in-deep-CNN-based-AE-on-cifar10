@@ -5,11 +5,11 @@ The architecture chosen consists deep CNNs (and upsampling layers) inspired from
 
 ## Encoder:  (N,p) refers to a conv layer with N channels and a filter with edge p, valid padding.
 
-Input -> (64,3) -> (64,2) -> (MaxPool, 2) -> (128,2) -> (128,2) -> (128,1) -> (128,2) -> (128,2) -> (128,1) -> (256,2) -> (256,2) -> (256,1) -> (256,2) -> (256,2) -> (256,1) -> (512,2) -> (512,2) -> (512,2) -> (512,2) -> (512,2) -> (512,1) -> Flatten -> Dense(3*latent_dim) -> Dense(2*latent_dim) -> Dense(latent_dim) -> Encoder output.
+Input -> (64,3) -> (64,2) -> (MaxPool, 2) -> (128,2) -> (128,2) -> (128,1) -> (128,2) -> (128,2) -> (128,1) -> (256,2) -> (256,2) -> (256,1) -> (256,2) -> (256,2) -> (256,1) -> (512,2) -> (512,2) -> (512,2) -> (512,2) -> (512,2) -> (512,1) -> Flatten -> Dense(3* latent_dim) -> Dense(2* latent_dim) -> Dense(latent_dim) -> Encoder output.
 
-## Decoder: Includes deconv,conv and upsampling layers. a(N,p)* refers to a deconv layer, valid padding.
+## Decoder: Includes deconv,conv and upsampling layers. (N,p)* refers to a deconv layer, valid padding.
 
-Encoder output -> Dense(2*latent_dim) -> Dense(3*latent_dim) -> Dense(4*latent_dim) -> Dense(2*2*1024) -> Reshape(2,2,1024) -> (1024,1)* -> (512,1)* -> (512,2)* -> (512,2)* -> (256,1)* -> (256,2)* -> (256,2)* -> (256,2)* -> Upsampling(2,2) -> (128,2)* -> (128,2)* -> (128,2)* -> (128,2)* -> Upsampling(2,2) -> (128,2) -> (128,2) -> (128,1) -> (64,2) -> (64,2) -> (3,1) -> Decoder output.
+Encoder output -> Dense(2* latent_dim) -> Dense(3* latent_dim) -> Dense(4* latent_dim) -> Dense(2*2*1024) -> Reshape(2,2,1024) -> (1024,1)* -> (512,1)* -> (512,2)* -> (512,2)* -> (256,1)* -> (256,2)* -> (256,2)* -> (256,2)* -> Upsampling(2,2) -> (128,2)* -> (128,2)* -> (128,2)* -> (128,2)* -> Upsampling(2,2) -> (128,2) -> (128,2) -> (128,1) -> (64,2) -> (64,2) -> (3,1) -> Decoder output.
 
 ## Results:
 
