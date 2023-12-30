@@ -1,5 +1,5 @@
 # AE-n-VAE-with-CB-loss-on-stl10
-Comparing performance of an AE trained using L1 vs L2 vs Continuous Bernoulli loss (based on 1907.06845) on the cifar10 dataset. 
+Comparing performance of an AE trained using mse (L1) vs mse (L2) vs Continuous Bernoulli loss (based on 1907.06845) on the cifar10 dataset. 
 
 The architecture chosen consists deep CNNs (and upsampling layers) inspired from the VGG networks and is as follows. The latent dim used is 200.
 
