@@ -13,6 +13,6 @@ Encoder output -> Dense(2* latent_dim) -> Dense(3* latent_dim) -> Dense(4* laten
 
 ## Results:
 
-Between the reconstructions from the network trained w.r.t. L2 loss and that trained w.r.t. CB loss, the former set has brighter colours and the latter set appears more washed out, however the reconstructed images in the latter case appear to be a little less blurry than the former set. 
+Between the reconstructions from the network trained w.r.t. L2 loss and that trained w.r.t. CB loss, the latter set has brighter colours (almost too bright) and very sharp contrast. 
 
-The results using L1 loss appear to be the worst as the reconstructed images are even more blurry than the ones corresponding to L2 loss although the colours are bright. 
+The results using L1 loss appear to be the worst as the reconstructed images are even more blurry than the ones corresponding to L2 loss although the colours are okay. 
