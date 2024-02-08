@@ -13,6 +13,6 @@ Encoder output -> Dense(2* latent_dim) -> Dense(3* latent_dim) -> Dense(4* laten
 
 ## Results:
 
-Between the reconstructions from the network trained w.r.t. L2 loss and that trained w.r.t. CB loss, the latter set has brighter colours (too bright as they are brighter than the originals) and very sharp contrast. This can be explained by the convex nature of the log norm of p(x) which pushes pixel values to extremes.
+Between the reconstructions from the network trained w.r.t. L2 loss and that trained w.r.t. CB loss, the latter set has brighter colours (they are brighter than the originals) and very sharp contrast. This can be explained by the convex nature of the log norm of p(x) which pushes pixel values to extremes.
 
-The results using L1 loss appear to be the worst as the reconstructed images are even more blurry than the ones corresponding to L2 loss although the colours are okay. 
+The results using L1 loss appear to be similar (or worse) compared to L2, as the reconstructed images are blurry. 
